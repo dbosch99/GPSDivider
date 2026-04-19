@@ -1,5 +1,5 @@
 // === AspectRatio SW: cambia SOLO questa riga per forzare un refresh completo ===
-const CACHE = 'gpsdivider-19-04-2026-1';
+const CACHE = 'gpsdivider-19-04-2026-2';
 // ==============================================================================
 
 const ASSETS = [
