@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GPSDivider</title>
+
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 48px 24px;
+      line-height: 1.6;
+      color: #111;
+      background: #fff;
+    }
+
+    h1 {
+      font-size: 42px;
+      margin: 0;
+    }
+
+    h2 {
+      margin-top: 40px;
+      font-size: 24px;
+    }
+
+    p {
+      font-size: 18px;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 16px;
+      padding: 14px 20px;
+      border-radius: 12px;
+      text-decoration: none;
+      background: #111;
+      color: #fff;
+      font-weight: 600;
+    }
+
+    .box {
+      margin-top: 32px;
+      padding: 24px;
+      border: 1px solid #ddd;
+      border-radius: 16px;
+    }
+
+    .small {
+      font-size: 14px;
+      color: #666;
+    }
+
+    .title {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 8px;
+    }
+
+    .icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="title">
+    <img src="icon.png" alt="GPSDivider icon" class="icon">
+    <h1>GPSDivider</h1>
+  </div>
+
+  <p class="small">
+    Requisiti minimi: macOS 14 Sonoma • Apple Silicon
+  </p>
+
+  <p>
+    Utility per macOS che divide foto e video in base alla presenza dei metadati di posizione.
+    Basta trascinare una cartella nell'app per separare rapidamente i media che contengono coordinate GPS da quelli che ne sono privi.
+  </p>
+
+  <div class="box">
+    <h2>Cosa fa</h2>
+    <p>
+      GPSDivider analizza i file contenuti in una cartella e li suddivide automaticamente in due nuove cartelle:
+      una per i media che includono metadati di posizione e una per quelli che non li contengono.
+    </p>
+    <p>
+      In questo modo è possibile individuare rapidamente le foto e i video privi di coordinate GPS
+      e aggiungere manualmente i metadati mancanti solo dove necessario.
+    </p>
+  </div>
+
+  <div class="box">
+    <h2>Come funziona</h2>
+    <p>
+      Basta trascinare una cartella contenente foto e video nell'app.
+      GPSDivider verifica per ogni file la presenza dei metadati di posizione e lo sposta automaticamente
+      nella cartella corretta.
+    </p>
+    <p>
+      Al termine dell'analisi, l'app mostra quanti file sono stati inseriti nella cartella dei media con metadati di posizione
+      e quanti nella cartella dei media senza metadati di posizione.
+    </p>
+  </div>
+
+  <div class="box">
+    <h2>Download</h2>
+
+    <p class="small">
+      Versione: 19-04-2026
+    </p>
+
+    <a class="button" href="https://github.com/dbosch99/GPSDivider/releases/latest/download/GPSDivider-macOS.zip">
+      Scarica per macOS
+    </a>
+
+    <p class="small">
+      L'app non è firmata con certificato Apple. macOS bloccherà il primo avvio.
+      Segui le istruzioni incluse nello ZIP per aprirla.
+    </p>
+  </div>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./service-worker.js', { scope: './' }).catch(console.error);
+      });
+    }
+  </script>
+
+</body>
+</html>
